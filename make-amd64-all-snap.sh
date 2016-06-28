@@ -17,4 +17,6 @@ fi
 	--kernel canonical-pc-linux \
 	--os ubuntu-core \
 	--install webdm \
+	--install network-manager \
+	--install bluez \
 	-o havasu-$TODAY-$MINOR_RELEASE.img

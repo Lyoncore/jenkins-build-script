@@ -14,7 +14,7 @@ fi
 	--size 4 \
 	--enable-ssh \
 	--gadget canonical-pc \
-	--kernel canonical-pc-linux \
+	--kernel canonical-pc-linux_4.4.0-23+20160518.15-43_amd64.snap \
 	--os ubuntu-core \
 	--install webdm \
 	--install network-manager \

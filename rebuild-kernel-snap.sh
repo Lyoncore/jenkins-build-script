@@ -17,7 +17,7 @@ sudo cp temp/* kernel-snap -r
 sync
 sudo umount temp
 
-sudo chown core-taipei:core-taipei kernel-snap -R
+sudo chown $USER:$USER kernel-snap -R
 cd kernel-snap
 kern_ver=`cat meta/snap.yaml | grep modules: | awk '{print $2}'`
 initrd=`cat meta/snap.yaml | grep initrd: | awk '{print $2}'`

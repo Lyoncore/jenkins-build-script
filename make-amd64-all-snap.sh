@@ -19,10 +19,11 @@ fi
 	--channel $CHANNEL \
 	--size 4 \
 	--enable-ssh \
-	--gadget canonical-pc \
-	--kernel canonical-pc-linux \
+	--gadget pc \
+	--kernel pc-kernel \
 	--os ubuntu-core \
-	--install webdm \
+	--install snapweb \
 	--install network-manager \
+	--install modem-manager \
 	--install bluez \
 	-o $PROJECT-$TODAY-$MINOR_RELEASE.img

@@ -1,18 +1,19 @@
 #!/bin/sh
-amd64_kernel_snap_source=https://public.apps.ubuntu.com/anon/download-snap/SkKeDk2PRgBrX89DdgULk3pyY5DJo6Jk_30.snap
+amd64_kernel_snap_source=https://public.apps.ubuntu.com/anon/download-snap/pYVQrBcKmBa0mZ4CCN7ExT6jH8rY1hza_2.snap
 amd64_kernel_snap_file=$(basename $amd64_kernel_snap_source)
 
-rm canonical-pc-linux*.snap
+rm temp -rf
 rm kernel-snap -rf
 
 cwd=$(pwd)
 
-if [ ! -f canonical-pc-linux.snap ] ; then
+if [ ! -f pc-kernel.snap ] ; then
+	rm pc-kernel*.snap
 	wget $amd64_kernel_snap_source
-	mv $amd64_kernel_snap_file canonical-pc-linux.snap
+	mv $amd64_kernel_snap_file pc-kernel.snap
 fi
 mkdir temp kernel-snap
-sudo mount canonical-pc-linux.snap temp
+sudo mount pc-kernel.snap temp
 sudo cp temp/* kernel-snap -r
 sync
 sudo umount temp

@@ -13,10 +13,11 @@ fi
 	--channel $CHANNEL \
 	--size 4 \
 	--enable-ssh \
-	--gadget canonical-pc \
-	--kernel canonical-pc-linux_4.4.0-23+20160518.15-43_amd64.snap \
+	--gadget pc \
+	--kernel pc-kernel \
 	--os ubuntu-core \
-	--install webdm \
+	--install snapweb \
 	--install network-manager \
+	--install modem-manager \
 	--install bluez \
 	-o havasu-$TODAY-$MINOR_RELEASE.img
